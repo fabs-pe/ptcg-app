@@ -11,15 +11,18 @@ export default function ApiProvider({children}){
     //     setApiUrl("https://api.pokemontcg.io/");
     // }, []);
 
-    return(
-        <ApiContext.Provider value={{api: apiUrl, setApi: setApiUrl}}>
+	return (
+		<ApiContext.Provider value={
+			{
+				api: apiUrl, 
+				setApi: setApiUrl
+			}
+		}>
 
-            {children}
+			{children}
 
-        </ApiContext.Provider>
-
-
-    )
+		</ApiContext.Provider>
+	)
 
 
 
